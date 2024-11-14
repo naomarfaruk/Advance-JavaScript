@@ -44,3 +44,20 @@ console.log(obj)
     }
     console.log(obj)
 }
+
+{
+    let fname= "Omar";
+    let lname = "Faruk";
+    let course= "Btech";
+
+    function Student(fname, lname, course){
+        let fullname= fname+ " " + lname;
+        return {fullname, course}
+    }
+    let s = Student(fname, lname, course)
+    console.log(s)
+    console.log(s.fullname)
+    console.log(s.course)
+  
+
+}
