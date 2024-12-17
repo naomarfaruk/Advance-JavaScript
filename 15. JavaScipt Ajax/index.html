@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Ajax</title>
+</head>
+<body>
+    <h1 id="demo">This is the load text</h1>
+    <button onclick="load()">Click</button>
+
+
+
+    <script>
+
+function load(){
+
+    let xhttp= new XMLHttpRequest()
+xhttp.onreadystatechange= function(){
+    if(this.readyState==4 && this.status==200){
+       document.getElementById("demo").innerHTML=(this.responseText)
+    }
+}
+
+
+
+    xhttp.open("GET", "readme.html", true);
+    xhttp.send();
+
+
+
+}
+
+
+
+    </script>
+</body>
+</html>
